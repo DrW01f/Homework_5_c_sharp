@@ -12,9 +12,15 @@ int[] GetArray(int size)
     return res;
 }
 
-
-
-
+int EvenCounter(int[] array)
+{
+    int sum = 0;
+    for (int i = 1; i < array.Length; i+=2)
+    {
+        sum += array[i];
+    }
+    return sum;
+}
 
 
 
@@ -27,6 +33,9 @@ void Main()
     Console.WriteLine("Введите число элементов ");
     int count = int.Parse(Console.ReadLine()!);
     int[] newArray = GetArray(count);
+    Console.WriteLine(String.Join(" ", newArray));
+    int summEven = EvenCounter(newArray);
+    Console.WriteLine(summEven);
 
 }
 
